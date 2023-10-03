@@ -15,8 +15,8 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return delivery 테스트 1', () => {
-      expect(appController.getHello()).toBe('delivery 테스트 1');
+    it('should return delivery 테스트 2', () => {
+      expect(appController.getHello()).toBe('delivery 테스트 2');
     });
   });
 });
