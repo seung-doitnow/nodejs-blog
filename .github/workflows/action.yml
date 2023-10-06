@@ -1,8 +1,11 @@
+# workflow 이름
 name: my actions
 
+# workflow_dispatch -> workflow 수동 실행 가능
 on:
   workflow_dispatch:
 
+# workflow 환경 변수 설정
 env:
   PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
   BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
@@ -10,7 +13,7 @@ env:
   DEPLOYMENT_GROUP_NAME: ${{ secrets.DEPLOYMENT_GROUP_NAME }}
 
 jobs:
-  # test
+  # test, 작업 이름
   test:
     runs-on: ubuntu-latest
 
@@ -34,7 +37,7 @@ jobs:
       - name: start test
         run: npm test
 
-  # delivery
+  # delivery, 작업 이름
   delivery:
     # test 작업이 성공했을 때만 실행
     needs: test
