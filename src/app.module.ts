@@ -2,7 +2,7 @@ import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { LoggerMiddlewareMiddleware } from './commons/middlewares/logger.middleware.middleware';
+import { LoggerMiddlewareMiddleware } from './commons/middlewares/logger.middleware';
 
 @Module({
   imports: [
